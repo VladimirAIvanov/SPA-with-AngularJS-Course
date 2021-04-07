@@ -1,3 +1,4 @@
+// browser-sync start --server --directory -- files "**.*"
 (function() {
     `use strict`;
 
@@ -12,7 +13,7 @@
 
         $scope.check = function() {
         	var howManyFoods = numbersOfFood($scope.listOfMeals);
-        	if (howManyFoods<=3 && howManyFoods>0) {
+        	if (howManyFoods>0 && howManyFoods<=3) {
         		$scope.masage = "Enjoy!";
         	} else if (howManyFoods>3) {
         		$scope.masage = "Too much!";
@@ -23,11 +24,18 @@
         }
     }
 
+    function checkIfEmpty(eat) {
+        return eat != "";
+    }
+
     function numbersOfFood(foods) {
         if (foods == "") {
             return 0;
         }
-        var nOfFoods = foods.split(',').filter(Boolean); // No empty strings
+        var nOfFoods = foods.split(',').map(function(item) { 
+            return item.trim(); 
+        }).filter(checkIfEmpty); // No empty strings
+
         return nOfFoods.length;
     }
 })();
