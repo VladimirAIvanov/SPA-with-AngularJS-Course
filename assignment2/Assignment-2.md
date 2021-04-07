@@ -44,7 +44,7 @@ Here is what you will need to do to complete the assignment:
 4. HTML/CSS for the assignment
   * Option 1: Copy the **contents** of the folder `assignment2-starter-code` into the newly created folder from the previous step. If you cloned this repository, the assignment 2 folder is located in `root_dir_of_your_local_repo/assignments/assignment2/assignment2-starter-code`
   * Option 2: Create the HTML/CSS yourself. Make sure to name the HTML file `index.html`. The only requirement is that your HTML have the required lists as described in the General Idea section. You can make the lists side by side or one under the other. The rest is up to you.
- ---  5. Import AngularJS into your project and place a `<script>` tag right before the `</body>` tag.
+5. Import AngularJS into your project and place a `<script>` tag right before the `</body>` tag.
 6. Declare `ng-app` either on the `html` or the `body` element. Name your app `ShoppingListCheckOff`.
 7. Create `app.js` in your project and declare an Angular module to match your `ng-app` declaration.
 8. Go back to `index.html` and declare 2 controllers using `controller as` syntax. One controller should be called `ToBuyController` and the other called `AlreadyBoughtController`. You are *required* to have 2 controllers for this assignment.
