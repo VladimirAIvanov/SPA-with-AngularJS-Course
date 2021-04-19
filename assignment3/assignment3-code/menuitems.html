@@ -1,0 +1,12 @@
+<br>
+<br>
+<br>
+<br>
+<div>
+<ol>
+  <li ng-repeat="category in itemsList.items">
+    {{ category.id }} {{ category.short_name }} {{ category.name }}
+    <button ng-click="itemsList.onRemove({index: $index});">Don't want this one!</button>
+  </li>
+</ol>
+</div>
