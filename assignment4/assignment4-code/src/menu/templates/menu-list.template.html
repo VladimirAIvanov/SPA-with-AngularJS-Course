@@ -1,0 +1,10 @@
+<ul>
+    <li ng-if="item.id > 100" ng-repeat="item in $ctrl.items" >
+       <a ui-sref="items.details({itemId: item.id})">{{item.id}}: {{ item.short_name }}  -- {{ item.name }}</a> 
+    </li>
+    <li ng-if="item.id <= 100" ng-repeat="item in $ctrl.items" >
+       <a ui-sref="menu.details({itemId: item.id})">{{item.id}}: {{ item.short_name }}  -- {{ item.name }}</a> 
+        <button ng-if="item.id <= 100" ui-sref="items({itemShort: item.short_name})">See items</button>
+    </li>
+</ul>
+<!-- mainList.itemDetail({itemId: $index}) -->
